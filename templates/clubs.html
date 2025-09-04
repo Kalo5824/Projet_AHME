@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+  
+<head>
+  <title>Les clubs</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+  <header>
+    <h1 style="text-align:center"> AHME </h1>
+    <h2 style="text-align:center"> École de Combats </h2>
+  </header>
+  <nav>
+    <a href="accueil" style="text-align:center">Accueil</a> -
+    <a href="clubs" style="text-align:center">Les clubs</a> -
+    <a href="tournois" style="text-align:center">Les tournois</a>
+  </nav>
+
+
+  <h1> Liste des clubs </h1>
+
+  <table>
+  {% for club in clublist %}
+  <tr>
+    <td> 
+      <img 
+        src = "{{ url_for('static', filename = club.logo) }}" 
+        width = 50 
+        alt = "logo_club"
+      > 
+    </td>
+    <td> 
+      <a href = {{url_for('page_club', code = club.code)}}>{{ club.nom }}</a>
+    </td>
+  </tr>
+  {% endfor %}
+
+  </table>
+
+  <p>Tu veux rejoindre un club ? Clique sur le lien !</p>
+  <a href = {{url_for('demand')}}>Rejoindre !</a>
+
+  <p>Tu veux créer ton propre club ? Clique sur le lien !</p>
+  <a href = {{url_for('create')}}>Créer !</a>
+
+</body>
+</html>

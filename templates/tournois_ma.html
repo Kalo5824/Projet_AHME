@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+    
+<head>
+    <title>Vos tournois</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+      <h1 style="text-align:center"> AHME </h1>
+      <h2 style="text-align:center"> École de Combats </h2>
+      <link rel="stylesheet" href="styles.css">
+    </header>
+    <nav style="text-align:center; background-color:LightGray">
+        <a href="accueil">Accueil</a> -
+        <a href="clubs">Les clubs</a> -
+        <a href="tournois">Les tournois</a> -
+    </nav>
+
+    <h1> Liste de vos tournois </h1>
+
+    <ul>
+        {% for tournoi in list_tournois %}
+            <li> <a href = {{url_for('page_tournoi', n_tournoi = tournoi.n_tournoi)}}>{{ tournoi.n_tournoi }}</a> </a> </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

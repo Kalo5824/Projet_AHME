@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+    
+<head>
+    <title>Inscription</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+    <h1 style="text-align:center"> AHME </h1>
+    <h2 style="text-align:center"> École de Combats </h2>
+    <link rel="stylesheet" href="styles.css">
+    </header>
+    <nav style="text-align:center; background-color:LightGray">
+        <a href="accueil">Accueil</a> -
+        <a href="clubs">Les clubs</a> -
+        <a href="tournois">Les tournois</a> -
+    </nav>
+
+    Pour créer votre compte, remplissez le formulaire ci-dessous :
+
+    <form method="post" action="/form_inscription">
+        <p> Nom : <input type="text" name="nom">
+        <p> Prénom : <input type="text" name="prenom">
+        <p> Genre :
+            <input type="radio" name="sexe" value="H" id = "H">
+            <label for = "H">Homme</label>
+            <input type="radio" name="sexe" value="F" id = "F">
+            <label for = "F">Femme</label>
+            <input type="radio" name="sexe" value="N" id = "N">
+            <label for = "N">Neutre</label>
+        <p> Date de naissance : <input type = "date" name = "date_de_naissance">
+        <p> Entrez votre adresse mail : <input type = "text" name="email">
+        <p> Mot de passe : <input type = "password" name = "mdp">
+        <p> Répéter le mot de passe : <input type = "password" name = "mdp2">
+        <p><input type=submit value="Envoyer">
+    </form>
+</body>
+</html>

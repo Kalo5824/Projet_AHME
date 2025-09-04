@@ -1,0 +1,126 @@
+
+body {
+    font-family: 'Merriweather', serif;
+    background-color: #2c2c2c; 
+    color: #2c2c2c;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background: #2c2c2c;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 4px solid #bf9000;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color :#fff;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+header h2 {
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 5px 0;
+    font-style: italic;
+}
+
+
+nav {
+    background: #bf9000; 
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav a {
+    color: #fff; 
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+a {
+    color :#fff;
+}
+
+a:hover {
+    color : rgb(55, 216, 216);
+}
+
+main {
+    padding: 20px;
+    background: #fff;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 1200px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px; 
+}
+
+
+p {
+    color :#fff;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+form a {
+    display: inline-block;
+    text-align: center;
+    padding: 5px 10px;
+}
+
+
+form {
+    margin-top: 20px;
+    padding: 15px;
+    background: #2c2c2c;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form input, form select, form button {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form input[type="submit"], form button {
+    background: #bf9000;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover, form button:hover {
+    background: #996c00;
+}
+
+footer {
+    background: #2c2c2c;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+    border-top: 4px solid #bf9000;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}

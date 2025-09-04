@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+  
+<head>
+  <title>Page du tournoi n°{{tournament.n_tournoi}}</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <h1 style="text-align:center"> AHME </h1>
+    <h2 style="text-align:center"> École de Combats </h2>
+    <link rel="stylesheet" href="styles.css">
+  </header>
+  <nav style="text-align:center; background-color:LightGray">
+    <a href="accueil">Accueil</a> -
+    <a href="clubs">Les clubs</a> -
+    <a href="tournois">Les tournois</a> -
+  </nav>
+
+  <h1> Tournoi n°{{tournament.n_tournoi}} </h1>
+  <p>Nombre maximum de participants : {{tournament.nbmax}}</p>
+  <p>Type d'arbitrage : {{tournament.type_arbitrage}}</p>
+  <p>Montant du prix à gagner : {{tournament.prix}}</p>
+  <p>Frais d'inscription : {{tournament.frais_inscription}}</p>
+  <p>Niveau de protection requis : {{tournament.niv_protection}}</p>
+  <p>Lieu : {{tournament.lieu}}</p>
+  <p>Date : {{tournament.date}}</p>
+  <p>Arbitre n°{{tournament.n_adh_arbitre}}</p>
+</body>
+</html>

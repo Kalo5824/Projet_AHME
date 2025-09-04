@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+    
+    
+<head>
+    <title>Créer un club</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <header>
+    <h1 style="text-align:center"> AHME </h1>
+    <h2 style="text-align:center"> École de Combats </h2>
+    </header>
+    <nav style="text-align:center">
+    <a href="accueil">Accueil</a> -
+    <a href="clubs">Les clubs</a> -
+    <a href="tournois">Les tournois</a>
+    </nav>
+
+    <form method = "POST" action = "/traitement_demande_club">
+        <p> Nom de ton club: <input type = "text" name="nom_club"></p>
+        <p>A quelle adresse ? <input type = "text" name="adresse"></p>
+        <p> Descriptif : <input type = "text" name="descriptif"></p>
+        <p>
+            <label for="arme">L'arme enseignée :</label>
+            <select id="arme" name="arme">
+            {% for arme in armelist %}
+                <option value="{{ arme }}"> {{ arme }} </option>
+            {% endfor %}
+            </select>
+        </p>
+        <p>
+            <label for="style">A la façon : </label>
+            <select id="style" name="style">
+            {% for style in stylelist %}
+                <option value="{{ style }}"> {{ style }} </option>
+            {% endfor %}
+            </select>
+        </p>
+        <p><input type=submit value="Créer !">
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+  
+<head>
+    <title>Accueil</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+  <header>
+    <h1 style="text-align:center"> AHME </h1>
+    <h2 style="text-align:center"> École de Combats </h2>
+  </header>
+  <nav style="text-align:center">
+    <a href="accueil">Accueil</a> -
+    <a href="clubs">Les clubs</a> -
+    <a href="tournois">Les tournois</a>
+  </nav>
+
+  <div style="text-align: center;">
+    <p><b><a href="{{ url_for('register') }}">S'inscrire</a></b></p>
+    <p><b><a href="{{ url_for('login') }}">Se connecter</a></b></p>
+    <p><b><a href="{{ url_for('logout') }}">Se déconnecter</a></b></p>
+  </div>
+  
+</body>
+</html>

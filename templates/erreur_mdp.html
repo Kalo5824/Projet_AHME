@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+  
+<head>
+  <title>Rejoindre un tournoi</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+  <header>
+    <h1 style="text-align:center"> AHME </h1>
+    <h2 style="text-align:center"> École de Combats </h2>
+    <link rel="stylesheet" href="styles.css">
+  </header>
+  <nav style="text-align:center; background-color:rgb(88, 22, 22)">
+    <a href="accueil">Accueil</a> -
+    <a href="clubs">Les clubs</a> -
+    <a href="tournois">Les tournois</a>
+  </nav>
+
+  <p>Désolé nous n'avons pas pu établir la connexion, il y a une erreur dans votre mot de passe.</p>
+  <p>Clique sur le lien ci dessous pour revenir à la page de connexion :</p>
+  <a href = {{url_for('login')}}>Se connecter</a>
+</body>
+</html>

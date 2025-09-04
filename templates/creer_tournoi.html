@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+    
+<head>
+    <title>Connexion</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <header>
+      <h1 style="text-align:center"> AHME </h1>
+      <h2 style="text-align:center"> École de Combats </h2>
+    </header>
+    <nav style="text-align:center">
+    <a href="accueil">Accueil</a> -
+    <a href="clubs">Les clubs</a> -
+    <a href="tournois">Les tournois</a>
+    </nav>
+
+    <form method = "POST" action = "/traiter_demande_tournoi">
+        <p>Attention ! Il faut être maitre d'armes pour pouvoir créer un club</p>
+        <p>Je souhaite créer un tournoi au nom du club :
+            <select id="club" name="club">
+                {% for nom_club in list_clubs_ma %}
+                    <option value="{{ nom_club }}"> {{ nom_club }} </option>
+                {% endfor %}
+            </select>
+        </p>
+        <p> Nombre maximum de participants : <input type="number" name="nbmax" min="2" max="8" step="2"></p>
+        <p>
+            <label for="type_arbitrage">Le type d'arbitrage : </label>
+            <select id="type_arbitrage" name="type_arbitrage">
+            {% for type_arbitrage in list_arbitrage %}
+                <option value="{{ type_arbitrage }}"> {{ type_arbitrage }} </option>
+            {% endfor %}
+            </select>
+        </p>
+        <p> Montant du prix à gagner : <input type = "text" name="prix"></p>
+        <p> Frais d'inscription : <input type = "text" name="frais"></p>
+        <p>
+            <label for="niv_protection">Le niveau de protection requis : </label>
+            <select id="niv_protection" name="niv_protection">
+            {% for niveau in niv_protection %}
+                <option value="{{ niveau }}"> {{ niveau }} </option>
+            {% endfor %}
+            </select>
+        </p>
+        <p> Lieu : <input type = "text" name="lieu"></p>
+        <p> Date : <input type = "date" name="date"></p>
+        <p><input type=submit value="Créer !"></p>
+</body>
+</html>

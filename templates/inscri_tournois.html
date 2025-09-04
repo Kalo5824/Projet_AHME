@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<title>Rejoindre un tournoi</title>
+
+<header>
+  <h1 style="text-align:center"> AHME </h1>
+  <h2 style="text-align:center"> École de Combats </h2>
+</header>
+
+
+<nav style="text-align:center; background-color:LightGray">
+    <a href="accueil">Accueil</a> -
+    <a href="clubs">Les clubs</a> -
+    <a href="tournois">Les tournois</a> -
+  </nav>
+
+
+<form method = "POST" action = "/traiter_demande_insc_tournoi">
+    <p>
+        <label for="join_t">Je souhaite participer au tournoi n° : </label>
+        <select id="tournoi" name="n_tournoi">
+        {% for tournoi in list_tournoi %}
+            <option value="{{ tournoi }}"> {{ tournoi }} </option>
+        {% endfor %}
+    </select>
+    </p>
+
+    <p>En tant que participant : 
+        <input type="radio" name="participant" value="oui">
+        <label for = "part"> Oui </label>
+        <input type="radio" name="participant" value="non">
+        <label for = "part"> Non </label>
+    </p>
+
+    <p>En tant que juge : 
+        <input type="radio" name="juge" value="oui">
+        <label for = "juge"> Oui </label>
+        <input type="radio" name="juge" value="non">
+        <label for = "juge"> Non </label>
+    </p>
+
+    <p>En tant qu'arbitre : 
+        <input type="radio" name="arbitre" value="oui">
+        <label for = "arb"> Oui </label>
+        <input type="radio" name="arbitre" value="non">
+        <label for = "arb"> Non </label>
+    </p>
+
+    <p>Mon numéro de licence compétition (si j'en ai un): <input type="text" name = "lic_compet">
+
+    <p>Je veux une licence compétition me permettant de participer au tournoi : 
+        <input type="radio" name="veut_liccompet" value="oui">
+        <label for = "veut_liccompet"> Oui </label>
+        <input type="radio" name="veut_liccompet" value="non">
+        <label for = "veut_liccompet"> Non </label>
+    </p>
+
+    <input type="submit" value="Rejoindre !">
+</form>
+</html>

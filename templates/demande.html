@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+    
+<head>
+    <title>Rejoindre un club</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+      <h1 style="text-align:center"> AHME </h1>
+      <h2 style="text-align:center"> École de Combats </h2>
+    </header>
+    <nav style="text-align:center; background-color:LightGray">
+        <a href="accueil">Accueil</a> -
+        <a href="clubs">Les clubs</a> -
+        <a href="tournois">Les tournois</a> -
+    </nav>
+
+    <form method = "POST" action = "/process_demand_join_club">
+        <p>
+            <label for="join">Je souhaite rejoindre le club : </label>
+            <select id="club" name="club">
+            {% for nom_club in list_nom %}
+                <option value="{{ nom_club }}"> {{ nom_club }} </option>
+            {% endfor %}
+        </select>
+        </p>
+
+        <p>En tant que maitre d'armes : 
+            <input type="radio" name="maitre_armes" value="oui">
+            <label for = "m_a"> Oui </label>
+            <input type="radio" name="maitre_armes" value="non">
+            <label for = "adh"> Non </label>
+        </p>
+
+        <p>Je veux une licence compétition me permettant de participer aux tournois : 
+            <input type="radio" name="lic_compet" value="oui">
+            <label for = "lic_compet"> Oui </label>
+            <input type="radio" name="lic_compet" value="non">
+            <label for = "licence"> Non </label>
+        </p>
+        <input type="submit" value="Rejoindre !">
+    </form>
+</body>
+</html>

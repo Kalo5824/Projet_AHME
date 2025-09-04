@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Rejoindre un tournoi</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+  <header>
+    <h1 style="text-align:center"> AHME </h1>
+    <h2 style="text-align:center"> École de Combats </h2>
+  </header>
+  <nav style="text-align:center">
+    <a href="accueil">Accueil</a> -
+    <a href="clubs">Les clubs</a> -
+    <a href="tournois">Les tournois</a>
+  </nav>
+
+  <p>Félicitations, ta demande a été acceptée ! On te retrouve le {{ date }} pour le tournoi n°{{ n_tournoi}} !</p>
+</body>
+</html>
